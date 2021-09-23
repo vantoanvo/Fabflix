@@ -9,21 +9,21 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-// this annotation maps this Java Servlet Class to a URL
+// This annotation maps this Java Servlet Class to a URL
 @WebServlet("/stars")
 public class StarServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // change this to your own mysql username and password
+        // Change this to your own mysql username and password
         String loginUser = "mytestuser";
         String loginPasswd = "My6$Password";
         String loginUrl = "jdbc:mysql://localhost:3306/moviedbexample";
 
-        // set response mime type
+        // Set response mime type
         response.setContentType("text/html");
 
-        // get the printwriter for writing response
+        // Get the PrintWriter for writing response
         PrintWriter out = response.getWriter();
 
         out.println("<html>");
@@ -45,14 +45,14 @@ public class StarServlet extends HttpServlet {
 
             out.println("<table border>");
 
-            // add table header row
+            // Add table header row
             out.println("<tr>");
             out.println("<td>id</td>");
             out.println("<td>name</td>");
             out.println("<td>birth year</td>");
             out.println("</tr>");
 
-            // add a row for every star result
+            // Add a row for every star result
             while (resultSet.next()) {
                 // get a star from result set
                 String starID = resultSet.getString("id");
@@ -83,7 +83,7 @@ public class StarServlet extends HttpServlet {
              *   tail -100 catalina.out
              * This can help you debug your program after deploying it on AWS.
              */
-            e.printStackTrace();
+            request.getServletContext().log("Error: ", e);
 
             out.println("<body>");
             out.println("<p>");
