@@ -35,7 +35,9 @@ This example shows a basic Java Servlet that shows a star list page.
     
 ### To run this example: 
 1. Clone this repository using `git clone`
-2. Open IntelliJ -> Import Project -> Choose the project you just cloned (The root path must contain the pom.xml!) -> Choose Import project from external model -> choose Maven -> Click on Finish -> The IntelliJ will load automatically
+2. Open IntelliJ -> Import Project ->
+Choose the project you just cloned (The root path must contain the pom.xml!) ->
+Choose Import project from external model -> choose Maven -> Click on Finish -> The IntelliJ will load automatically
 3. For "Root Directory", right click "cs122b-project1-star-example" -> Mark Directory as -> sources root
 4. In `src/StarServlet.java`, make sure the mysql username is `mytestuser` and password is `mypassword`.
 5. Also make sure you have the `moviedbexample` database.
