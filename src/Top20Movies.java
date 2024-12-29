@@ -62,13 +62,13 @@ public class Top20Movies extends HttpServlet{
                 jsonObject.addProperty("rating", movieRating);
 
                 //use the movieId to the genres from movie
-                String query2 = "{CALL GetMovieGenres(?)}";
+                String query2 = "{CALL GetGenresFromMovie(?)}";
                 CallableStatement stmt2 = conn.prepareCall(query2);
                 stmt2.setString(1, movieId);
                 ResultSet rs2 = stmt2.executeQuery();
                 StringBuilder tmp = new StringBuilder();
                 while(rs2.next()){
-                    tmp.append(rs2.getString("genre")).append(", ");
+                    tmp.append(rs2.getString("name")).append(", ");
                 }
                 jsonObject.addProperty("genres", tmp.toString().trim().substring(0, tmp.length()-2));
                 //use the movieId to generate the stars
