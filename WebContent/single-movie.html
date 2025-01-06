@@ -5,6 +5,43 @@
     <title>Single Movie</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/single-movie.js"></script>
+    <style>
+        .p-4{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensure the table takes up more horizontal space */
+        table {
+            width: 100%; /* Ensures the table spans the full width of its container */
+            border-collapse: collapse;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Add padding for more spacing inside cells */
+        th, td {
+            padding: 15px; /* Increase padding for larger cell spacing */
+        }
+
+        /* Set specific widths for each column */
+        th:nth-child(1), td:nth-child(1) { /* Title column */
+            width: 30%;
+        }
+        th:nth-child(2), td:nth-child(2) { /* Year column */
+            width: 10%;
+        }
+        th:nth-child(3), td:nth-child(3) { /* Director column */
+            width: 20%;
+        }
+        th:nth-child(4), td:nth-child(4) { /* Genres column */
+            width: 20%;
+        }
+        th:nth-child(5), td:nth-child(5) { /* Rating column */
+            width: 20%;
+        }
+    </style>
 </head>
 <body>
     <div class="p-4">
@@ -16,7 +53,7 @@
                 <th>Year</th>
                 <th>Director</th>
                 <th>Genres</th>
-        <!--        <th>Stars</th> -->
+                <th>Stars</th>
                 <th>Rating</th>
             </tr>
             </thead>

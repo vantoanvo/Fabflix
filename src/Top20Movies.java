@@ -55,7 +55,7 @@ public class Top20Movies extends HttpServlet{
 
                 //Create a JsonObject based on the data we retrieve from rs1
                 JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("movied_id", movieId);
+                jsonObject.addProperty("movie_id", movieId);
                 jsonObject.addProperty("title", movieTitle);
                 jsonObject.addProperty("year", movieYear);
                 jsonObject.addProperty("director", movieDirector);

@@ -52,26 +52,30 @@ public class SingleMovie extends HttpServlet{
             JsonArray jsonArray = new JsonArray();
             //iterate through each row of rs
             while(rs.next()){
-                JsonObject starObj = new JsonObject();
-
                 String movieTitle = rs.getString("title");
                 String movieYear = rs.getString("year");
                 String movieDirector = rs.getString("director");
                 String movieGenres = rs.getString("all_genres");
                 String movieRating = rs.getString("rating");
-                String starId = rs.getString("id");
-                String starName = rs.getString("name");
 
                 jsonObject.addProperty("movie_title", movieTitle);
                 jsonObject.addProperty("movie_year", movieYear);
                 jsonObject.addProperty("movie_director", movieDirector);
                 jsonObject.addProperty("movie_genres", movieGenres);
                 jsonObject.addProperty("movie_rating", movieRating);
-                jsonArray.add(jsonObject); //add the row t
 
-                starObj.addProperty("star_id", starId);
-                starObj.addProperty("star_name", starName);
-                jsonArray.add(starObj);
+                //create star array
+                JsonArray starsArray = new JsonArray();
+                do {
+                    String starId = rs.getString("id");
+                    String starName = rs.getString("name");
+                    JsonObject starObj = new JsonObject();
+                    starObj.addProperty("star_id", starId);
+                    starObj.addProperty("star_name", starName);
+                    starsArray.add(starObj);
+                }while(rs.next() && rs.getString("title").equals(movieTitle));
+                jsonObject.add("stars", starsArray);
+                jsonArray.add(jsonObject);
             }
             rs.close();
             stmt.close();

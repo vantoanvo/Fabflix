@@ -15,6 +15,15 @@ function handleResult(resultData) {
     rowHTML += "<td>" + resultData[0]["movie_year"] + "</td>";
     rowHTML += "<td>" + resultData[0]["movie_director"] + "</td>";
     rowHTML += "<td>" + resultData[0]["movie_genres"] + "</td>";
+    //Add stars as hyperlink
+    rowHTML += "<td>";
+    for(let i = 0; i < resultData[0]["stars"].length; i++){
+        rowHTML += "<a href='single-star.html?id=" + resultData[0]["stars"][i]["star_id"] + "'>" + resultData[0]["stars"][i]["star_name"] + "</a>";
+        if(i < resultData[0]["stars"].length - 1){
+            rowHTML += ", ";
+        }
+    }
+    rowHTML += "</td>";
     rowHTML += "<td>" + resultData[0]["movie_rating"] + "</td>";
     rowHTML += "</tr>";
     movieTbodyElement.append(rowHTML);

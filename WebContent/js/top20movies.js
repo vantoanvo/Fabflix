@@ -10,7 +10,7 @@ function handleResult(resultData){
     for (let i = 0; i < Math.min(20, resultData.length); i++) {
         let rowHTML = "";
         rowHTML += "<tr>";
-        rowHTML += "<td>" + resultData[i]["title"] + "</td>";
+        rowHTML += "<td><a href='single-movie.html?id=" + resultData[i]["movie_id"] + "'>"  + resultData[i]["title"] + "</td>";
         rowHTML += "<td>" + resultData[i]["year"] + "</td>";
         rowHTML += "<td>" + resultData[i]["director"] + "</td>";
         rowHTML += "<td>" + resultData[i]["genres"] + "</td>";
