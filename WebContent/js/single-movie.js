@@ -1,18 +1,7 @@
 // a function to get the id from url
 function getParameterByName(target) {
-    // Get request URL
-    let url = window.location.href;
-    // Encode target parameter name to url encoding
-    target = target.replace(/[\[\]]/g, "\\$&");
-
-    // Ues regular expression to find matched parameter value
-    let regex = new RegExp("[?&]" + target + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-
-    // Return the decoded parameter value
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(target);
 }
 
 
@@ -22,11 +11,11 @@ function handleResult(resultData) {
 
     let rowHTML = "";
     rowHTML += "<tr>";
-    rowHTML += "<th>" + resultData[0]["movie_title"] + "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_year"] + "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_director"] + "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_genres"] + "</th>";
-    rowHTML += "<th>" + resultData[0]["movie_rating"] + "</th>";
+    rowHTML += "<td>" + resultData[0]["movie_title"] + "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_year"] + "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_director"] + "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_genres"] + "</td>";
+    rowHTML += "<td>" + resultData[0]["movie_rating"] + "</td>";
     rowHTML += "</tr>";
     movieTbodyElement.append(rowHTML);
 }

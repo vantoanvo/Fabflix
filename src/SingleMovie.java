@@ -64,7 +64,7 @@ public class SingleMovie extends HttpServlet{
 
                 jsonObject.addProperty("movie_title", movieTitle);
                 jsonObject.addProperty("movie_year", movieYear);
-                jsonObject.addProperty("movie__director", movieDirector);
+                jsonObject.addProperty("movie_director", movieDirector);
                 jsonObject.addProperty("movie_genres", movieGenres);
                 jsonObject.addProperty("movie_rating", movieRating);
                 jsonArray.add(jsonObject); //add the row t
