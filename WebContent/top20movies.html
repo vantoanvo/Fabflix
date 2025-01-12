@@ -6,7 +6,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
 </head>
 <body>
-<div>
+    <div class="p-4">
+    <nav style="
+                background-color: #f8f9fa;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #ddd;
+            ">
+        <!-- Home Button -->
+        <a href="top20movies.html" style="
+                    padding: 10px 20px;
+                    color: white;
+                    background-color: #007bff;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                ">Home</a>
+    </nav>
     <table id=top20-movies class="table table-striped">
       <thead>
         <tr>
@@ -20,7 +38,7 @@
       </thead>
       <tbody id="top20-movies-tbody"></tbody>
     </table>
-</div>
+    </div>
 </body>
 <script src="js/top20movies.js"></script>
 </html>

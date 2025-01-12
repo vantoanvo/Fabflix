@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Single Movie</title>
+    <title>Single Star</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/single-movie.js"></script>
+    <script src="js/single-star.js"></script>
     <style>
         .p-4{
             background-color: white;
@@ -44,40 +44,29 @@
     </style>
 </head>
 <body>
-    <div class="p-4">
-        <nav style="
-                background-color: #f8f9fa;
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid #ddd;
-            ">
-            <!-- Home Button -->
-            <a href="top20movies.html" style="
-                    padding: 10px 20px;
-                    color: white;
-                    background-color: #007bff;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    font-size: 16px;
-                ">Home</a>
-        </nav>
-        <h1>Single Movie</h1>
-
-        <table>
-            <thead>
-            <tr>
-                <th>Title</th>
-                <th>Year</th>
-                <th>Director</th>
-                <th>Genres</th>
-                <th>Stars</th>
-                <th>Rating</th>
-            </tr>
-            </thead>
-            <tbody id="single_movie_tbody"></tbody>
-        </table>
-    </div>
+<div class="p-4">
+    <a href="top20movies.html" style="
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+    ">Home</a>
+    <h1>Single Star</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Birth Year</th>
+            <th>All Movies</th>
+        </tr>
+        </thead>
+        <tbody id="single_star_tbody"></tbody>
+    </table>
+</div>
 </body>
 </html>
