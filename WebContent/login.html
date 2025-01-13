@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            display: none; /* Initially hidden */
+        }
+        /* Default button style */
+        #submit_btn {
+            transition: all 1s ease; /* Smooth transition for all changes */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* When the button is clicked, shrink it and apply a shadow */
+        #submit_btn:active {
+            transform: scale(0.95);  /* Shrink the button slightly */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+            background-color: #0056b3; /* Change the background color slightly */
+        }
+
+        /* Optional: when the button is hovered, change color */
+        #submit_btn:hover {
+            background-color: #0056b3; /* Slightly darker blue when hovered */
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Login</h1>
+    <form id="login_form" method="post">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Submit" id="submit_btn">
+    </form>
+    <div id="login_error_message" class="error-message"></div>
+</div>
+<script type= "module" src="js/login.js"></script>
+</body>
+</html>

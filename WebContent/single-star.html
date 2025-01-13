@@ -5,6 +5,7 @@
     <title>Single Star</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/single-star.js"></script>
+    <script src="js/logout.js"></script>
     <style>
         .p-4{
             background-color: white;
@@ -45,17 +46,27 @@
 </head>
 <body>
 <div class="p-4">
-    <a href="top20movies.html" style="
-        display: inline-block;
-        margin-bottom: 20px;
-        padding: 10px 20px;
-        color: white;
-        background-color: #007bff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 16px;
-        text-align: center;
-    ">Home</a>
+    <nav style="
+                background-color: #f8f9fa;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #ddd;
+            ">
+            <a href="top20movies.html" style="
+                display: inline-block;
+                margin-bottom: 20px;
+                padding: 10px 20px;
+                color: white;
+                background-color: #007bff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+                text-align: center;
+            ">Home</a>
+    <button id="logout_btn" style="display:none;">Log Out</button>
+    </nav>
     <h1>Single Star</h1>
     <table>
         <thead>

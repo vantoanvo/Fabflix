@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Top 20 Movies</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="js/top20movies.js" defer></script> <!-- External JS file -->
+    <script src="js/logout.js"></script>
 </head>
 <body>
-    <div class="p-4">
+<div class="p-4">
     <nav style="
                 background-color: #f8f9fa;
                 padding: 10px;
@@ -24,21 +26,24 @@
                     border-radius: 5px;
                     font-size: 16px;
                 ">Home</a>
+
+        <!-- Log Out Button (Hidden by default) -->
+        <button id="logout_btn" style="display:none;">Log Out</button>
     </nav>
-    <table id=top20-movies class="table table-striped">
-      <thead>
+
+    <table id="top20-movies" class="table table-striped">
+        <thead>
         <tr>
-          <th>Title</th>
-          <th>Year</th>
-          <th>Director</th>
-          <th>Genres</th>
-          <th>Stars</th>
-          <th>Rating</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Genres</th>
+            <th>Stars</th>
+            <th>Rating</th>
         </tr>
-      </thead>
-      <tbody id="top20-movies-tbody"></tbody>
+        </thead>
+        <tbody id="top20-movies-tbody"></tbody>
     </table>
-    </div>
+</div>
 </body>
-<script src="js/top20movies.js"></script>
 </html>
