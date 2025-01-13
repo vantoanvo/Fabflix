@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 import java.sql.*;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet(name = "Top20Movies", urlPatterns = "/api/top20-movies")
 public class Top20Movies extends HttpServlet{
